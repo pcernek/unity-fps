@@ -4,6 +4,10 @@
 1. Install git-lfs
 1. Install p4merge
 
+# Deployment
+
+Currently deployed to https://play.unity.com/mg/fps/webgl-builds-102323 from within Unity.
+
 # References
 
 Git set-up for Unity: https://hextantstudios.com/unity-using-git/
