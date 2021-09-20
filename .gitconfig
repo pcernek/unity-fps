@@ -1,0 +1,27 @@
+#
+# Borrowed from: https://hextantstudios.com/unity-using-git/
+#
+
+[diff]
+    tool = p4merge
+[difftool]
+    prompt = false
+[difftool "p4merge"]
+    cmd = '/Applications/p4merge.app/Contents/MacOS/p4merge' \"$REMOTE\" \"$LOCAL\"
+    prompt = false
+[merge]
+    tool = p4merge
+[mergetool]
+    keepBackup = false
+[mergetool "p4merge"]
+    cmd = '/Applications/p4merge.app/Contents/MacOS/p4merge' \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    trustExitCode = true
+
+[merge]
+    tool = unityyamlmerge
+
+# Docs: https://docs.unity3d.com/Manual/SmartMerge.html
+[mergetool "unityyamlmerge"]
+    trustExitCode = false
+    keepBackup = false
+    cmd = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
